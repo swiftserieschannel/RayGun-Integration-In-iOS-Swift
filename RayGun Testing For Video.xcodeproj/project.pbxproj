@@ -12,7 +12,23 @@
 		17D5436922E4A99E001889AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17D5436722E4A99E001889AF /* Main.storyboard */; };
 		17D5436B22E4A9A0001889AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17D5436A22E4A9A0001889AF /* Assets.xcassets */; };
 		17D5436E22E4A9A0001889AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17D5436C22E4A9A0001889AF /* LaunchScreen.storyboard */; };
+		17D5437B22E4AD9D001889AF /* raygun4apple.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17D5437A22E4AD9D001889AF /* raygun4apple.framework */; };
+		17D5437C22E4AD9D001889AF /* raygun4apple.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 17D5437A22E4AD9D001889AF /* raygun4apple.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		17D5437822E4AA1E001889AF /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				17D5437C22E4AD9D001889AF /* raygun4apple.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		17D5436022E4A99E001889AF /* RayGun Testing For Video.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RayGun Testing For Video.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,6 +38,8 @@
 		17D5436A22E4A9A0001889AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		17D5436D22E4A9A0001889AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		17D5436F22E4A9A0001889AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17D5437922E4AA52001889AF /* RayGunTestingForVideo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RayGunTestingForVideo-Bridging-Header.h"; sourceTree = "<group>"; };
+		17D5437A22E4AD9D001889AF /* raygun4apple.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = raygun4apple.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17D5437B22E4AD9D001889AF /* raygun4apple.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +57,7 @@
 		17D5435722E4A99E001889AF = {
 			isa = PBXGroup;
 			children = (
+				17D5437A22E4AD9D001889AF /* raygun4apple.framework */,
 				17D5436222E4A99E001889AF /* RayGun Testing For Video */,
 				17D5436122E4A99E001889AF /* Products */,
 			);
@@ -60,6 +80,7 @@
 				17D5436A22E4A9A0001889AF /* Assets.xcassets */,
 				17D5436C22E4A9A0001889AF /* LaunchScreen.storyboard */,
 				17D5436F22E4A9A0001889AF /* Info.plist */,
+				17D5437922E4AA52001889AF /* RayGunTestingForVideo-Bridging-Header.h */,
 			);
 			path = "RayGun Testing For Video";
 			sourceTree = "<group>";
@@ -74,6 +95,7 @@
 				17D5435C22E4A99E001889AF /* Sources */,
 				17D5435D22E4A99E001889AF /* Frameworks */,
 				17D5435E22E4A99E001889AF /* Resources */,
+				17D5437822E4AA1E001889AF /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -283,13 +305,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y5WJ4B7E4Z;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "RayGun Testing For Video/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.swiftseries.RayGun-Testing-For-Video";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RayGun Testing For Video/RayGunTestingForVideo-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -300,13 +329,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y5WJ4B7E4Z;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "RayGun Testing For Video/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.swiftseries.RayGun-Testing-For-Video";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RayGun Testing For Video/RayGunTestingForVideo-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

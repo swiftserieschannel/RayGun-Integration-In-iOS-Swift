@@ -16,6 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let raygunClient = RaygunClient.sharedInstance(apiKey:"3lVZKHzxAj39wSCMVm29g")
+        raygunClient.enableCrashReporting()
+        let userInformation = RaygunUserInformation(identifier: "myuser@yygun.com", email: "myuser@aygoun.com", fullName: "Utser", firstName: "UYTest")
+        RaygunClient.sharedInstance().userInformation = userInformation
         return true
     }
 
@@ -39,6 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+        
     }
 
 

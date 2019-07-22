@@ -10,11 +10,16 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var testVariable:Int?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
 
+    @IBAction func clickedCrashBtn(_ sender: Any) {
+        debugPrint(testVariable!)
+    }
 }
 
